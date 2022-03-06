@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@color/bg"
     tools:context=".Delete">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
 
     <TextView
         android:id="@+id/logo"
@@ -16,7 +21,7 @@
         android:layout_margin="20dp"
         android:text="Make Item List"
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <TextView
@@ -45,7 +50,10 @@
         <Button
             android:id="@+id/deleteitem"
             android:layout_below="@id/txtquantity"
-            android:layout_width="wrap_content"
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Delete This Item"
             android:onClick="deleteItem" />
@@ -66,14 +74,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/t3"
         android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
         android:text=""/>
 
         <Button
             android:id="@+id/show"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
             android:text="Show All Item"
             android:onClick="showItem" />
 
@@ -101,6 +114,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
             android:text="Go to Home"
             android:layout_below="@id/lv"
             android:onClick="gotoHome" />
@@ -108,6 +124,6 @@
 
     </LinearLayout>
 
-
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@color/bg"
     tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
 
     <TextView
         android:id="@+id/logo"
@@ -13,10 +18,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="30dp"
         android:text="Make Item List"
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="50dp"
         android:textStyle="bold" />
 
     <TextView
@@ -63,6 +68,9 @@
             android:layout_height="wrap_content"
             android:text="Add Item"
             android:layout_marginRight="50dp"
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
             android:onClick="addItem" />
 
         <Button
@@ -71,6 +79,9 @@
             android:layout_toRightOf="@id/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
             android:text="See All Items"
             android:onClick="getAllItems" />
 
@@ -99,6 +110,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Update Item"
+
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
             android:layout_marginRight="50dp"
             android:onClick="updateItem" />
         <Button
@@ -106,9 +121,12 @@
             android:layout_toRightOf="@id/update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:background="@drawable/button_round"
+            android:shadowColor="@color/shadow"
+            android:textColor="@color/bg"
             android:text="Delete Item"
             android:onClick="deleteItem" />
     </LinearLayout>
-
-
+</RelativeLayout>
 </RelativeLayout>
