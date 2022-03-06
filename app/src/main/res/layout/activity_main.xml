@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="Make Item List"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t1"
+        android:text="Enter Item Name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtitem"
+        android:layout_margin="5dp"
+        android:hint="Item Name"
+        android:layout_below="@id/t1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/t2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txtitem"
+        android:text="Enter Item Quantity"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtquantity"
+        android:layout_margin="5dp"
+        android:hint="Item Quantity (If you want to remember)"
+        android:layout_below="@id/t2"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/l1"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtquantity"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/add"
+            android:layout_below="@id/txtquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            android:layout_marginRight="50dp"
+            android:onClick="addItem" />
+
+        <Button
+            android:id="@+id/see"
+            android:layout_below="@id/txtquantity"
+            android:layout_toRightOf="@id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See All Items"
+            android:onClick="getAllItems" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_below="@id/l1"
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/l2"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:layout_below="@id/lv"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Item"
+            android:layout_marginRight="50dp"
+            android:onClick="updateItem" />
+        <Button
+            android:id="@+id/delete"
+            android:layout_toRightOf="@id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Item"
+            android:onClick="deleteItem" />
+    </LinearLayout>
+
+
+</RelativeLayout>

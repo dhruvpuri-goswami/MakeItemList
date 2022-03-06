@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".Delete">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="Make Item List"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t1"
+        android:text="Enter Item Name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtitem"
+        android:layout_margin="5dp"
+        android:hint="Item Name (Which you want to delete)"
+        android:layout_below="@id/t1"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/l1"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtitem"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/deleteitem"
+            android:layout_below="@id/txtquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete This Item"
+            android:onClick="deleteItem" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/l4"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:layout_below="@id/l1">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t3"
+        android:layout_marginTop="20dp"
+        android:text=""/>
+
+        <Button
+            android:id="@+id/show"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Show All Item"
+            android:onClick="showItem" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/l5"
+        android:visibility="invisible"
+        android:layout_below="@id/l4"
+        android:orientation="vertical">
+
+        <ListView
+            android:layout_below="@id/l4"
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Go to Home"
+            android:layout_below="@id/lv"
+            android:onClick="gotoHome" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

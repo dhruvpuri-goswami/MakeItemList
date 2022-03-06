@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".update">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="Make Item List"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t1"
+        android:text="Enter Item Name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtitem"
+        android:layout_margin="5dp"
+        android:hint="Item Name (In which you want to Update)"
+        android:layout_below="@id/t1"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/l1"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtitem"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/procupdate"
+            android:layout_below="@id/txtquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Process Update This Item"
+            android:onClick="OnProcessUpdate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l1"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:id="@+id/l3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/t2"
+            android:layout_marginTop="15dp"
+            android:text="Change Item Quantity"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtquantity"
+            android:layout_margin="5dp"
+            android:hint="Item Quantity"/>
+
+        <Button
+            android:id="@+id/update"
+            android:layout_below="@id/txtquantity"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Item"
+            android:onClick="updateItem" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t3"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/l3"
+        android:layout_centerHorizontal="true"
+        android:text=""/>
+
+
+    <Button
+        android:id="@+id/gohome"
+        android:layout_below="@id/t3"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="Go to Home"
+        android:onClick="gotoHome" />
+
+
+</RelativeLayout>
